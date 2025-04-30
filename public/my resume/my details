@@ -1,0 +1,69 @@
+
+MARKANDEYULU REDDI
+DevOps Engineer
+📞 +91 8919878315 | 📧 markandeyulu.reddi@gmail.com
+📍 Pune, Maharashtra
+
+=================================================================
+PROFESSIONAL SUMMARY
+=================================================================
+An accomplished IT professional with over 5.7 years of experience in DevOps, specializing in Kubernetes, Docker, Linux, and shell scripting. 
+Proven ability to design and optimize CI/CD pipelines for seamless integration and deployment. Experience in Logistics and Telecom domains.
+Effectively collaborates with engineering and change management teams to facilitate the smooth progression of bug fixes and user stories.
+Excels in reviewing deployment components and contributing to agile workflows, including complex migrations and new environment setups.
+
+=================================================================
+EXPERIENCE
+=================================================================
+
+Senior Associate Consultant
+Infosys Ltd | Pune | 07/2021 – Present
+- Experience in Version Control Systems (GIT) for managing code repositories.
+- Utilized Jenkins with shared libraries for efficient CI/CD pipeline implementation.
+- Automated configuration management and deployment using Ansible.
+- Managed MongoDB and MySQL databases, backups, and clustering.
+- Deployed containerized apps on Kubernetes with HA and load balancing.
+- Configured HAProxy and Nginx for load balancing in Kubernetes.
+- Designed and maintained GlusterFS with NFS integration.
+- Integrated Prometheus and Grafana for monitoring and insights.
+- Used Apache Kafka for microservices communication and data processing.
+- Built automated CI/CD pipelines using Jenkins, Ansible, Kubernetes.
+- Implemented IAM using Vault, Keycloak with MySQL backend.
+- Secured SSH with Teleport, enabled session recording and auditing.
+- Conducted vulnerability scanning with Clamscan and Wazuh.
+- Fostered DevOps culture, optimized workflows, reduced delivery time by 20%.
+
+Design Engineer Trainee
+DPI IND Services Pvt Ltd | Bengaluru | 04/2019 – 12/2020
+- Configured and managed AWS resources: EC2, ELB, Auto-Scaling, IAM, S3, etc.
+- Created IAM users, roles, and policies for secure access.
+- Deployed infrastructure using AWS CloudFormation scripts.
+- Implemented CI/CD pipelines with TeamCity and Octopus.
+- Developed shell scripts for automation: backups, log rotation, monitoring.
+- Hands-on with Terraform for IaC provisioning.
+- Managed both Windows and Linux environments.
+- Performed proactive environment monitoring.
+
+=================================================================
+SKILLS
+=================================================================
+- Version Control: Git
+- CI/CD: TeamCity, Octopus, Jenkins
+- Artifact Management: JFrog Artifactory
+- Configuration Management: Ansible
+- IaC: Terraform
+- Databases: MongoDB, MySQL
+- Containerization: Docker
+- Orchestration: Kubernetes
+- Security Tools: Trivy, Wazuh, Clamscan
+- Monitoring: Prometheus, Grafana, Solarwinds, ELK
+- Platforms: Windows, Linux
+- Scripting: Shell
+- Cloud: AWS
+
+=================================================================
+EDUCATION
+=================================================================
+Bachelor of Technology (B.Tech) in Electrical and Electronics Engineering
+MVGR College of Engineering, Vizianagaram, Andhra Pradesh (2012 – 2016)
+Achieved 82.12%
