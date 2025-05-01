@@ -94,7 +94,8 @@ const Projects: React.FC = () => {
           <div className="w-20 h-1 bg-teal-600 dark:bg-teal-400 mx-auto"></div>
           <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A showcase of my DevOps projects focusing on infrastructure automation, 
-            CI/CD pipelines, and monitoring solutions.
+            CI/CD pipelines, and monitoring solutions. Currently building awesome 
+            things – updates coming shortly.
           </p>
         </div>
 

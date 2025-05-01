@@ -1,10 +1,23 @@
 import React from 'react';
-import { ArrowDownCircle, Terminal } from 'lucide-react';
+import { ArrowDownCircle, Terminal, Download, Mail } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/my resume/MarkandeyuluReddi_DevSecOps_Resume_5.8yrs.pdf';
+    link.download = 'MarkandeyuluReddi_DevSecOps_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center px-6 pt-20">
-      <div className="container mx-auto">
+    <section id="home" className="min-h-screen flex items-center px-6 pt-20 relative">
+      <div className="absolute inset-0 z-0">
+        <div id="tsparticles" className="w-full h-full" />
+      </div>
+      
+      <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <div className="relative inline-block mb-4">
@@ -20,35 +33,38 @@ const Hero: React.FC = () => {
               specializing in Kubernetes, Docker, Linux, and shell scripting.
             </p>
             <div className="flex flex-wrap gap-4">
+              <button 
+                onClick={handleDownloadResume}
+                className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-md shadow-md transition-all duration-300 transform hover:-translate-y-1 flex items-center"
+              >
+                <Download size={20} className="mr-2" />
+                Download Resume
+              </button>
               <a 
                 href="#contact" 
-                className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-md shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                className="px-6 py-3 border border-teal-600 dark:border-teal-400 text-teal-600 dark:text-teal-400 font-medium rounded-md hover:bg-teal-600/10 transition-all duration-300 transform hover:-translate-y-1 flex items-center"
               >
-                Get in Touch
-              </a>
-              <a 
-                href="#projects" 
-                className="px-6 py-3 border border-teal-600 dark:border-teal-400 text-teal-600 dark:text-teal-400 font-medium rounded-md hover:bg-teal-600/10 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                View Projects
+                <Mail size={20} className="mr-2" />
+                Hire Me
               </a>
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 bg-teal-600/20 rounded-full flex items-center justify-center overflow-hidden">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-teal-600 to-teal-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <div className="w-64 h-64 md:w-80 md:h-80 bg-teal-600/20 rounded-full flex items-center justify-center overflow-hidden relative z-10 transform transition duration-300 group-hover:scale-105">
                 <div className="w-60 h-60 md:w-72 md:h-72 bg-teal-600/30 rounded-full flex items-center justify-center">
                   <div className="w-56 h-56 md:w-64 md:h-64 bg-gray-200 dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden shadow-lg">
                     <img 
-                      src="/my resume/mark_white_bg.jpg" 
+                      src="/my resume/profilepic6.jpg" 
                       alt="Markandeyulu Reddi" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
                     />
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-900 p-4 rounded-full shadow-lg">
-                <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 rounded-full flex items-center justify-center">
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-900 p-4 rounded-full shadow-lg z-20">
+                <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/50 rounded-full flex items-center justify-center transform transition duration-300 hover:rotate-12">
                   <Terminal size={32} className="text-teal-600 dark:text-teal-400" />
                 </div>
               </div>

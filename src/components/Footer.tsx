@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/markandeyulu-reddi-b5b70b114/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 bg-gray-800 hover:bg-teal-600 rounded-full transition-colors duration-300"
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           <div className="w-full border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 mb-4 md:mb-0">
-                © {new Date().getFullYear()} John Doe. All rights reserved.
+                © {new Date().getFullYear()} Markandeyulu Reddi . All rights reserved.
               </p>
               <ul className="flex flex-wrap justify-center space-x-4">
                 <li>
@@ -75,6 +75,9 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a href="#projects" className="text-gray-400 hover:text-teal-400 transition-colors duration-300">Projects</a>
+                </li>
+                <li>
+                  <a href="#certifications" className="text-gray-400 hover:text-teal-400 transition-colors duration-300">Certifications</a>
                 </li>
                 <li>
                   <a href="#contact" className="text-gray-400 hover:text-teal-400 transition-colors duration-300">Contact</a>

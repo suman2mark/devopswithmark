@@ -1,55 +1,55 @@
 import React from 'react';
+import ReactStars from 'react-rating-stars-component';
 
 interface Skill {
   name: string;
-  percentage: number;
+  rating: number;
   category: 'infrastructure' | 'cicd' | 'cloud' | 'containerization' | 'monitoring' | 'automation';
 }
 
 const Skills: React.FC = () => {
   const skills: Skill[] = [
     // Version Control
-    { name: 'Git', percentage: 90, category: 'infrastructure' },
+    { name: 'Git', rating: 4, category: 'infrastructure' },
     
     // CI/CD
-    { name: 'Jenkins', percentage: 90, category: 'cicd' },
-    { name: 'TeamCity', percentage: 85, category: 'cicd' },
-    { name: 'Octopus', percentage: 85, category: 'cicd' },
+    { name: 'Jenkins', rating: 4, category: 'cicd' },
+    { name: 'TeamCity', rating: 3.5, category: 'cicd' },
+    { name: 'Octopus', rating: 3.5, category: 'cicd' },
     
     // Infrastructure & Configuration
-    { name: 'Terraform', percentage: 85, category: 'infrastructure' },
-    { name: 'Ansible', percentage: 85, category: 'automation' },
-    { name: 'JFrog Artifactory', percentage: 80, category: 'infrastructure' },
+    { name: 'Terraform', rating: 4, category: 'infrastructure' },
+    { name: 'Ansible', rating: 4, category: 'automation' },
+    { name: 'JFrog Artifactory', rating: 3.5, category: 'infrastructure' },
     
     // Containerization
-    { name: 'Docker', percentage: 90, category: 'containerization' },
-    { name: 'Kubernetes', percentage: 85, category: 'containerization' },
+    { name: 'Docker', rating: 4, category: 'containerization' },
+    { name: 'Kubernetes', rating: 4, category: 'containerization' },
     
     // Databases
-    { name: 'MongoDB', percentage: 85, category: 'infrastructure' },
-    { name: 'MySQL', percentage: 85, category: 'infrastructure' },
+    { name: 'MongoDB', rating: 3.5, category: 'infrastructure' },
+    { name: 'MySQL', rating: 3.5, category: 'infrastructure' },
     
     // Security
-    { name: 'Trivy', percentage: 80, category: 'automation' },
-    { name: 'Wazuh', percentage: 80, category: 'automation' },
-    { name: 'Clamscan', percentage: 80, category: 'automation' },
+    { name: 'Trivy', rating: 3.5, category: 'automation' },
+    { name: 'Wazuh', rating: 3.5, category: 'automation' },
+    { name: 'Clamscan', rating: 3.5, category: 'automation' },
     
     // Monitoring
-    { name: 'Prometheus', percentage: 85, category: 'monitoring' },
-    { name: 'Grafana', percentage: 85, category: 'monitoring' },
-    { name: 'Solarwinds', percentage: 80, category: 'monitoring' },
-    { name: 'ELK Stack', percentage: 80, category: 'monitoring' },
+    { name: 'Prometheus', rating: 4, category: 'monitoring' },
+    { name: 'Grafana', rating: 4, category: 'monitoring' },
+    { name: 'Solarwinds', rating: 3.5, category: 'monitoring' },
+    { name: 'ELK Stack', rating: 3.5, category: 'monitoring' },
     
     // Cloud & Platforms
-    { name: 'AWS', percentage: 90, category: 'cloud' },
-    { name: 'Linux', percentage: 90, category: 'infrastructure' },
-    { name: 'Windows', percentage: 85, category: 'infrastructure' },
+    { name: 'AWS', rating: 4, category: 'cloud' },
+    { name: 'Linux', rating: 4, category: 'infrastructure' },
+    { name: 'Windows', rating: 3.5, category: 'infrastructure' },
     
     // Scripting
-    { name: 'Shell Scripting', percentage: 90, category: 'automation' },
+    { name: 'Shell Scripting', rating: 4, category: 'automation' },
   ];
 
-  // Group skills by category
   const categories = {
     containerization: { title: 'Containerization', skills: skills.filter(s => s.category === 'containerization') },
     cloud: { title: 'Cloud & Platforms', skills: skills.filter(s => s.category === 'cloud') },
@@ -80,14 +80,15 @@ const Skills: React.FC = () => {
                   <div key={skill.name}>
                     <div className="flex justify-between mb-1">
                       <span className="font-medium">{skill.name}</span>
-                      <span className="text-gray-600 dark:text-gray-400">{skill.percentage}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                      <div 
-                        className="bg-teal-600 dark:bg-teal-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.percentage}%` }}
-                      ></div>
-                    </div>
+                    <ReactStars
+                      count={5}
+                      value={skill.rating}
+                      edit={false}
+                      size={24}
+                      activeColor="#2dd4bf"
+                      color="#cbd5e1"
+                    />
                   </div>
                 ))}
               </div>
